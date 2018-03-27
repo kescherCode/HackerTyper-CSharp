@@ -7,6 +7,14 @@
     <Win32Resource />
     <StartupObject>HackerTyper_CSharp.Program</StartupObject>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Jeremy Kescher</Authors>
+    <Description>A HackerTyper clone made by Jeremy Kescher</Description>
+    <Copyright>Unlicensed</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <Optimize>true</Optimize>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
   </PropertyGroup>
 
   <ItemGroup>
