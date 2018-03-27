@@ -22,11 +22,20 @@ namespace HackerTyper_CSharp
                                        DateTime.UtcNow.Millisecond);
             int i = 0;
             int strokeLength;
+            int height, width;
+            var keyPress = Console.ReadKey(true);
+
+            const int MIN_LENGTH = 2, MAX_LENGTH = 7, MIN_SLEEP = 5, MAX_SLEEP = 10;
+
+            Console.BufferHeight = height = Console.WindowHeight;
+            Console.BufferWidth = width = Console.WindowWidth;
+
             while (true)
             {
-                strokeLength = random.Next(2, 7); // 2 to 6. 7 is the non-inclusive upper boundary.
+                Console.WindowHeight = height;
+                Console.WindowWidth = width;
+                strokeLength = random.Next(MIN_LENGTH, MAX_LENGTH); // 2 to 6. 7 is the non-inclusive upper boundary.
 
-                var keyPress = Console.ReadKey(true);
                 switch (keyPress.Key)
                 {
                     case ConsoleKey.Escape:
@@ -110,10 +119,11 @@ namespace HackerTyper_CSharp
                 for (int c = 0; c < strokeLength; c++)
                 {
                     Console.Write(Resources.groups[i]);
-                    Thread.Sleep(random.Next(5, 10)); // Just to make it look more like actual typing
+                    Thread.Sleep(random.Next(MIN_SLEEP, MAX_SLEEP)); // Just to make it look more like actual typing
                     i = i < Resources.groups.Length - 1 ? i + 1 : 0;
                     if (i == 0) Console.Write("\n\n");
                 }
+                keyPress = Console.ReadKey(true);
             }
         }
     }
