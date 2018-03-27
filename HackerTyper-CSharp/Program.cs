@@ -13,7 +13,7 @@ namespace HackerTyper_CSharp
                 Console.ReadKey(true);
                 for (int c = 0; c < strokeLength; c++)
                 {
-                    Console.Write(Resources.groups[c]);
+                    Console.Write(Resources.groups[i]);
                     i = i < Resources.groups.MaxIndex() ? i + 1 : 0;
                 }
             }
