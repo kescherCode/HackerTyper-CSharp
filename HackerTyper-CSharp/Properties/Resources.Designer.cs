@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace HackerTyper-CSharp.Properties {
+namespace HackerTyper_CSharp {
     using System;
     
     
@@ -22,7 +22,7 @@ namespace HackerTyper-CSharp.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    public class Resources {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace HackerTyper-CSharp.Properties {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("HackerTyper-CSharp.Properties.Resources", typeof(Resources).Assembly);
@@ -51,12 +51,39 @@ namespace HackerTyper-CSharp.Properties {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
             set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to #include &lt;linux/cred.h&gt;
+        ///#include &lt;linux/export.h&gt;
+        ///#include &lt;linux/slab.h&gt;
+        ///#include &lt;linux/security.h&gt;
+        ///#include &lt;linux/sort.h&gt;
+        ///#include &lt;linux/syscalls.h&gt;
+        ///#include &lt;linux/user_namespace.h&gt;
+        ///#include &lt;linux/vmalloc.h&gt;
+        ///#include &lt;linux/uaccess.h&gt;
+        ///
+        ///struct group_info *groups_alloc(int gidsetsize)
+        ///{
+        ///	struct group_info *gi;
+        ///	unsigned int len;
+        ///
+        ///	len = sizeof(struct group_info) + sizeof(kgid_t) * gidsetsize;
+        ///	gi = kmalloc(len, GFP_KERNEL_ACCOUNT|__GFP_NOWARN|__GFP_NORETRY);
+        ///	if (!gi)
+        ///		gi = __vmalloc [rest of string was truncated]&quot;;.
+        /// </summary>
+        public static string groups {
+            get {
+                return ResourceManager.GetString("groups", resourceCulture);
             }
         }
     }
