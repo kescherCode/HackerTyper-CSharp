@@ -13,7 +13,13 @@ namespace HackerTyper_CSharp
             Console.InputEncoding = Console.OutputEncoding = System.Text.Encoding.UTF8;
             Console.CursorVisible = true;
 
-            Random random = new Random(DateTime.UtcNow.Millisecond);
+            Random random = new Random(DateTime.UtcNow.Year +
+                                       DateTime.UtcNow.Month +
+                                       DateTime.UtcNow.Day +
+                                       DateTime.UtcNow.Hour +
+                                       DateTime.UtcNow.Minute + 
+                                       DateTime.UtcNow.Second +
+                                       DateTime.UtcNow.Millisecond);
             int i = 0;
             int strokeLength;
 
