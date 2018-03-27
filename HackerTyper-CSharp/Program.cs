@@ -105,8 +105,9 @@ namespace HackerTyper_CSharp
                 for (int c = 0; c < strokeLength; c++)
                 {
                     Console.Write(Resources.groups[i]);
-                    Thread.Sleep(5); // Just to make it look like actual typing
-                    i = i < Resources.groups.MaxIndex() ? i + 1 : 0;
+                    Thread.Sleep(5); // Just to make it look more like actual typing
+                    i = i < Resources.groups.Length - 1 ? i + 1 : 0;
+                    if (i == 0) Console.WriteLine('\n');
                 }
             }
         }
